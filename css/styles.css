@@ -73,118 +73,157 @@ ul {
 
 @media screen and (max-width:767px) {
   /* ======================== HEADER=================== */
-  .top-line {
-    
-    margin-right: auto;
+
+  .container {
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-left: auto;
-    display: flex;
-    flex-shrink: 0;
-    border-bottom: 1px solid #e7e9fc;
-    background: #fff;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-  }
-  .main-navigation {
-    display: flex;
-    align-items: center;
-  }
-  .menu {
-    display: flex;
-    gap: 40px;
     margin-right: auto;
   }
-  
-  .contacts {
+  .menu{
+    display: none;
+  }
+  .contacts-list{
+    display: none;
+  }
+  .page-header-cont{
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .logo{
+    color:#4D5AE5 ;
+font-family: Raleway;
+font-size: 18px;
+font-weight: 700;
+line-height: 1.16;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+display: inline-flex;
+align-items: center;
+margin-right: 149px;
+  }
+  .logo-plus{
+    color:#2E2F42 ;
+  }
+  .mobile-menu-open-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    stroke:#2F2F37;
+  }
+  .mobile-menu-wrapper{
     display: flex;
-    align-items: center;
-    margin-left: auto;
-  }
-  .contacts-list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-  
-  .logo {
-    color: #4d5ae5;
-    font-family: Raleway, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    display: inline-flex;
-    height: 24px;
-    align-items: center;
-    flex-shrink: 0;
-    margin-right: 76px;
-    position: relative;
-    color: #404bbf;
-  }
-  .logo-plus {
-    color: #2e2f42;
-    font-family: Raleway, sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    display: inline-flex;
-    height: 24px;
-    align-items: center;
-    flex-shrink: 0;
-  }
-  .menu-link {
-    color: #404bbf;
-    position: relative;
-    display: block;
-    color: #2e2f42;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    padding: 24px 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .menu-link:active,
-  .menu-link:hover,
-  .menu-link:focus {
-    color: #404bbf;
-  }
-  .decor {
-    color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .decor::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 48px;
-    height: 4px;
-    background: #404bbf;
-    border-radius: 2px;
+    position: fixed;
+    top: 0;
     left: 0;
-    bottom: -1px;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .contacts {
-    font-style: normal;
+  .mobile-menu-wrapper.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
-  .contacts-link {
-    color: #434455;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
+ .mobile-menu-close-btn{
+    background-color: transparent;
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #E7E9FC;
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.10);
+ }
+ .mobile-menu-wrapper{
+    display: flex; 
+    flex-direction: column;
+ }
+ .mobile-menu-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-right: 24px;
+    padding-top: 72px;
+    padding-bottom: 40px;
+
+ }
+ .mobile-menu-navigation{
+    margin-bottom: 168px;
+ }
+ .mobile-menu{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+ }
+
+.mobile-menu-link{
+    color: #2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
     letter-spacing: 0.02em;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .contacts-link:active,
-  .contacts-link:hover,
-  .contacts-link:focus {
-    color: #404bbf;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.nav-header{
+    margin-bottom: 0px;
+}
+.color-word{
+    color: #404BBF;
+}
+.mobile-contacts-list{
+display: inline-flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+
+}
+.mobile-contacts-link{
+    color: #4D5AE5;
+font-size: 20px;
+font-weight: 500;
+line-height: 1.2;
+letter-spacing: 0.2em;
+}
+.color-link{
+    color: #434455;
+}
+.mobile-menu-social-list {
+    display: inline-flex;
+align-items: flex-start;
+gap: 40px;
+}
+.mobile-menu-social-list-item{
+    width: 40px;
+    height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-social-list-link{
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-social-list-icon{
+    fill: #F4F4FD;
+}
   /* ======================= FIRST SECTION ================ */
   .first-section {
     background-repeat: no-repeat;
@@ -241,6 +280,7 @@ ul {
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  
   /* ===================== ADVANTAGES ================= */
   .advantages-icon {
     width: 264px;
@@ -513,8 +553,9 @@ ul {
     align-items: center;
   }
   .underline-form{
-    display: flex; 
-    flex-direction: column; 
+    display: inline-flex;
+    flex-direction: column;
+     align-items: center;
     
   }
   
@@ -527,7 +568,6 @@ ul {
     color: #ffffff;
   
   }
- 
   .underline-form-field-input{
     width: 264px; 
     height: 40px;
@@ -540,6 +580,7 @@ ul {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: #ffffff;
+    
   
   }
   .underline-form-field-input::placeholder{
@@ -560,11 +601,12 @@ ul {
     border: none;
     border-radius: 4px;
     padding: 8px 24px;
-    gap: 16px;
+    margin-top: 16px;
+    margin-left: 77px;
+    margin-right: 77px;
   }
   
-  
-  
+  /* ========================= CHECKBOX==================== */
   .contacts-form-checkbox-wrapper {
     margin-bottom: 24px;
   
@@ -771,7 +813,6 @@ ul {
 /* ========================  TABLET========================= */
 @media screen and (min-width: 768px) {
   .top-line {
-    width: 1158px;
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -780,6 +821,10 @@ ul {
     background: #fff;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  }
+  .page-header-cont {
+    display: flex;
+    align-items: center;
   }
   .main-navigation {
     display: flex;
@@ -820,17 +865,6 @@ ul {
   }
   .logo-plus {
     color: #2e2f42;
-    font-family: Raleway, sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    display: inline-flex;
-    height: 24px;
-    align-items: center;
-    flex-shrink: 0;
   }
   .menu-link {
     color: #404bbf;
@@ -1129,7 +1163,8 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
-  
+
+  /* ============================ FOOTER ======================= */
   .bottom-line {
     margin-right: auto;
     margin-left: auto;
@@ -1138,11 +1173,11 @@ ul {
   }
   .underline {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+    justify-content: center;
   }
-  .bottom-underline {
-    margin-right: 120px;
-  }
+  
   .under-logo {
     color: #4d5ae5;
     font-family: Raleway, sans-serif;
@@ -1213,10 +1248,6 @@ ul {
   .media-link-bottom {
     fill: #f4f4fd;
   }
-  .page-header-cont {
-    display: flex;
-    align-items: center;
-  }
   
   .underline-form-text{
     margin-bottom: 16px;
@@ -1227,6 +1258,7 @@ ul {
     color: #ffffff;
   
   }
+  
   .underline-form-field{
     display: flex;
     gap: 24px;
@@ -1268,7 +1300,7 @@ ul {
   }
   
   
-  
+  /* ======================== CHECKBOX=================== */
   .contacts-form-checkbox-wrapper {
     margin-bottom: 24px;
   
@@ -1503,4 +1535,6 @@ ul {
     width: 360px;
   }
 }
+  /* ======================== FOOTER =================== */
+  
   
