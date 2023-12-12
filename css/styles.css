@@ -81,6 +81,7 @@ ul {
     margin-left: auto;
     margin-right: auto;
   }
+  
   .menu{
     display: none;
   }
@@ -147,11 +148,9 @@ margin-right: 149px;
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.10);
  }
- .mobile-menu-wrapper{
-    display: flex; 
-    flex-direction: column;
- }
+ 
  .mobile-menu-container{
+    width: 320px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -160,8 +159,11 @@ margin-right: 149px;
     padding-bottom: 40px;
 
  }
+ .mobile-contacts-wrapper{
+  margin-top: auto;
+ }
  .mobile-menu-navigation{
-    margin-bottom: 168px;
+    margin-bottom: auto;
  }
  .mobile-menu{
     display: flex;
@@ -179,7 +181,7 @@ margin-right: 149px;
     text-decoration: none;
 }
 .nav-header{
-    margin-bottom: 0px;
+    margin-bottom: auto;
 }
 .color-word{
     color: #404BBF;
@@ -189,17 +191,19 @@ display: inline-flex;
 flex-direction: column;
 align-items: flex-start;
 gap: 24px;
+margin-bottom: 48px;
 
 }
 .mobile-contacts-link{
-    color: #4D5AE5;
+  font-style: normal;
+    color:  #434455;
 font-size: 20px;
 font-weight: 500;
 line-height: 1.2;
-letter-spacing: 0.2em;
+letter-spacing: 0.02em;
 }
 .color-link{
-    color: #434455;
+    color: #4D5AE5;
 }
 .mobile-menu-social-list {
     display: inline-flex;
@@ -282,6 +286,9 @@ gap: 40px;
   }
   
   /* ===================== ADVANTAGES ================= */
+  .second-section{
+    padding: 96px 0;
+  }
   .advantages-icon {
     width: 264px;
     height: 112px;
@@ -325,6 +332,7 @@ gap: 40px;
     margin-right: auto;
     margin-left: auto;
     background-color: #f4f4fd;
+    padding: 96px 0;
   }
   .team {
     color: #2e2f42;
@@ -403,7 +411,9 @@ gap: 40px;
     fill: #f4f4fd;
   }
   /* ========================== OUR PORTFOLIO ================== */
-
+.fourth-section{
+  padding: 96px 0;
+}
   
   .portfolio {
     color: #2e2f42;
@@ -555,7 +565,7 @@ gap: 40px;
   .underline-form{
     display: inline-flex;
     flex-direction: column;
-     align-items: center;
+    align-items: center;
     
   }
   
@@ -569,7 +579,7 @@ gap: 40px;
   
   }
   .underline-form-field-input{
-    width: 264px; 
+    width: 288px; 
     height: 40px;
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -580,6 +590,7 @@ gap: 40px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: #ffffff;
+    opacity: 0.3;
     
   
   }
@@ -687,8 +698,8 @@ gap: 40px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 408px;
-      min-height: 584px;
+      width: 288px;
+      min-height: 623px;
       background-color: #fcfcfc;
       border-radius: 4px;
       padding: 72px 24px 24px 24px;
@@ -723,13 +734,14 @@ gap: 40px;
   
   }
   .contacts-form-description {
+    display: flex;
       color: #2e2f42;
       text-align: center;
       font-size: 16px;
       font-weight: 500;
       line-height: 1.5;
       letter-spacing: 0.02em;
-      width: 360px;
+      width: 256px;
       margin-bottom: 16px;
   }
   
