@@ -1617,7 +1617,11 @@ gap: 40px;
   .adds {
     width: 360px;
   }
+  /* ==================== FOOTER==================== */
+  .underline-form{
+    margin-top: 0;
+  }
 }
   
-  
+
   
