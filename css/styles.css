@@ -68,7 +68,14 @@ ul {
         padding: 96px 0;
     }
   }
-
+  .is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+.no-scroll{
+  overflow: hidden;
+}
 /* ========================  MOBILE  ===================== */
 
 @media screen and (max-width:767px) {
@@ -90,6 +97,9 @@ ul {
   }
   .page-header-cont{
     justify-content: space-between;
+   
+  }
+  .top-line{
     padding-top: 16px;
     padding-bottom: 16px;
   }
@@ -124,14 +134,11 @@ margin-right: 149px;
     width: 100%;
     height: 100%;
     background-color: #fff;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .mobile-menu-wrapper.is-open{
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    transform: translate(0%);
   }
  .mobile-menu-close-btn{
     background-color: transparent;
@@ -232,7 +239,7 @@ gap: 40px;
   .first-section {
     background-repeat: no-repeat;
     background-position: center;
-    padding: 188px 0;
+    padding: 72px 0;
     margin-right: auto;
     margin-left: auto;
     background-color: #2e2f42;
@@ -240,8 +247,19 @@ gap: 40px;
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/bg.jpg/people-office.jpg');
+      url('../images/retina/dark-bgoffice-people-mobile@1x.jpg');
     background-size: cover;
+  }
+  @media (min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx){
+    .first-section{
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/retina/dark-bg-office-people-mobile@2x.jpg');
+    }
   }
   .main-item {
     color: #fff;
@@ -250,8 +268,10 @@ gap: 40px;
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.02em;
-    max-width: 288px;
+    max-width: 222px;
     text-transform: capitalize;
+    margin-right: auto;
+    margin-left: auto;
   }
   button {
     cursor: pointer;
@@ -276,7 +296,7 @@ gap: 40px;
     gap: 10px;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    margin-top: 48px;
+    margin-top: 72px;
     margin-left: auto;
     margin-right: auto;
     min-width: 169px;
@@ -334,6 +354,9 @@ gap: 40px;
     background-color: #f4f4fd;
     padding: 96px 0;
   }
+  .team-container{
+    max-width: 296px;
+  }
   .team {
     color: #2e2f42;
     text-align: center;
@@ -390,7 +413,7 @@ gap: 40px;
   .social-list-link {
     width: 40px;
     height: 40px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
   }
   .social-link {
     width: 100%;
@@ -400,11 +423,7 @@ gap: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .social-link:hover,
-  .social-link:focus {
-    background-color: #404bbf;
+    
   }
   
   .media-link {
@@ -490,7 +509,7 @@ gap: 40px;
     margin-right: auto;
     margin-left: auto;
     background: #2e2f42;
-    padding: 100px 0;
+    padding: 96px 0;
   }
   .underline {
     align-items: center;
@@ -508,7 +527,6 @@ gap: 40px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    height: 24px;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
@@ -564,12 +582,6 @@ gap: 40px;
     display: flex;
     align-items: center;
   }
-  .underline-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
   
   .underline-form-text{
     margin-bottom: 16px;
@@ -578,6 +590,7 @@ gap: 40px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
+    text-align: center;
   
   }
   .underline-form-field-input{
@@ -603,7 +616,7 @@ gap: 40px;
 
     min-width: 165px;
     height: 40px;
-    display: inline-flex;
+    display:flex;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -615,8 +628,8 @@ gap: 40px;
     border-radius: 4px;
     padding: 8px 24px;
     margin-top: 16px;
-    margin-left: 77px;
-    margin-right: 77px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   /* ========================= CHECKBOX==================== */
@@ -637,6 +650,8 @@ gap: 40px;
     line-height: 1.17; 
     letter-spacing: 0.04em; 
     color: #8e8f99;
+    display: flex;
+    align-items: center;
   }
   
   .contacts-form-own-checkbox {
@@ -649,6 +664,8 @@ gap: 40px;
     align-items: center;
     justify-content: center; 
     fill: transparent;
+    margin-right: 8px;
+    flex-shrink: 0;
   
   }
   
@@ -684,21 +701,14 @@ gap: 40px;
       width: 100%;
       height: 100%;
       background-color: rgba(46, 47, 66, 0.4);
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
       transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .is-open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-  }
+ 
   .modal {
       position: absolute;
       top: 50%;
-      left: 50%;
+      left: 50%; 
       transform: translate(-50%, -50%);
       width: 288px;
       min-height: 623px;
@@ -743,7 +753,6 @@ gap: 40px;
       font-weight: 500;
       line-height: 1.5;
       letter-spacing: 0.02em;
-      width: 256px;
       margin-bottom: 16px;
   }
   
@@ -861,6 +870,11 @@ gap: 40px;
     align-items: center;
     margin-left: auto;
   }
+  .contacts-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
   
   .logo {
     color: #4d5ae5;
@@ -935,10 +949,9 @@ gap: 40px;
   }
   /* ========================= FIRST SECTION ============== */
   .first-section {
-    max-width: 768px;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 188px 0;
+    padding: 112px 0;
     margin-right: auto;
     margin-left: auto;
     background-color: #2e2f42;
@@ -946,8 +959,19 @@ gap: 40px;
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/bg.jpg/people-office.jpg');
+      url('../images/retina/dark-bg-office-tablet@1x.jpg');
     background-size: cover;
+  }
+  @media (min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx){
+    .first-section{
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/retina/dark-bg-office-tab@2x.jpg');
+    }
   }
   .main-item {
     color: #fff;
@@ -1192,17 +1216,14 @@ gap: 40px;
     margin-right: auto;
     margin-left: auto;
     background: #2e2f42;
-    padding: 100px 0;
+    padding: 96px 0;
   }
   .underline {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    gap:72px 24px;
   }
   
-  .bottom-underline{
-    margin-right: 120px;
-  }
   
   .under-logo {
     color: #4d5ae5;
@@ -1212,23 +1233,11 @@ gap: 40px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    display: inline-flex;
-    height: 24px;
-    align-items: center;
-    flex-shrink: 0;
     display: inline-block;
     margin-bottom: 16px;
   }
   .logo-bottom {
     color: #f4f4fd;
-    font-family: Raleway, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 16px;
   }
   .info {
     max-width: 264px;
@@ -1238,9 +1247,7 @@ gap: 40px;
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
-  .media-bottom{
-    margin-right: 80px;
-  }
+  
   .media-text {
     font-weight: 500;
     font-size: 16px;
@@ -1274,9 +1281,7 @@ gap: 40px;
   .media-link-bottom {
     fill: #f4f4fd;
   }
-  .underline-form{
-    margin-top: 72px;
-  }
+  
   .underline-form-text{
     margin-bottom: 16px;
     font-weight: 500; 
@@ -1393,17 +1398,10 @@ gap: 40px;
       width: 100%;
       height: 100%;
       background-color: rgba(46, 47, 66, 0.4);
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
       transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .is-open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-  }
+ 
   .modal {
       position: absolute;
       top: 50%;
@@ -1536,6 +1534,11 @@ gap: 40px;
     display: none;
   }
 }
+@media screen and (min-width: 768px) and (max-width:1157px) {
+  .underline{
+    max-width: 584px;
+  }
+}
 /* ========================== DESKTOP ======================== */
 @media screen  and (min-width: 1158px){
 
@@ -1548,6 +1551,7 @@ gap: 40px;
 }
 .contacts-list{
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 40px;
   
@@ -1587,11 +1591,23 @@ gap: 40px;
     url('../images/bg.jpg/people-office.jpg');
   background-size: cover;
 }
+@media (min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx){
+    .first-section{
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/retina/people-office-desc@2x.jpg');
+    }
+  }
  /* ======================== ADVANTAGES =============== */
   
 .second-section{
   margin-right: auto;
   margin-left: auto;
+  padding: 120px 0;
 }
 
 .headers-list-menu {
@@ -1609,9 +1625,14 @@ gap: 40px;
 .third-section{
   margin-right: auto;
   margin-left: auto;
+  padding: 120px 0;
 }
+
 /* ======================= OUR PORTFOLIO=========== */
-  .about {
+  .fourth-section{
+    padding: 120px 0;
+  }
+.about {
     gap: 48px 24px;
   }
   .adds {
@@ -1620,6 +1641,16 @@ gap: 40px;
   /* ==================== FOOTER==================== */
   .underline-form{
     margin-top: 0;
+  }
+  .underline{
+    flex-wrap: nowrap;
+    gap: unset;
+  }
+  .bottom-underline{
+    margin-right: 120px;
+  }
+  .media-bottom{
+    margin-right: 80px;
   }
 }
   
