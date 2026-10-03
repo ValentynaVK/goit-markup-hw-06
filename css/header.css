@@ -10,16 +10,17 @@
   margin-right: auto;
 }
 
-.mobile-menu-btn {
+.mobile-menu-burger-btn {
   display: block;
   margin-left: auto;
   padding: 0;
   border: none;
   background-color: transparent;
 }
-.mobile-menu-btn-icon {
+.mobile-menu-burger-icon {
   display: block;
 }
+
 .main-nav,
 .contacts {
   display: none;
@@ -93,7 +94,7 @@
     padding: 0;
     border-bottom: 1px solid #e7e9fc;
   }
-  .mobile-menu-btn {
+  .mobile-menu-burger-btn {
     display: none;
   }
   .main-nav {
