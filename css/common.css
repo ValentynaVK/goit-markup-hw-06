@@ -47,10 +47,36 @@ img {
   overflow: hidden;
 }
 
+/* Helper class */
+.hide {
+  display: none !important;
+}
+
 .container {
-  max-width: 1158px;
-  padding: 0 15px;
+  min-width: 320px;
+  max-width: 375px;
+  padding: 16px;
   margin: 0 auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  /* max-width: 1158px;
+  padding: 0 15px;
+  */
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 16px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
 }
 
 .section-title {

@@ -30,6 +30,11 @@
         <a class="logo" href="./index.html">
           <span class="accent">WEB</span>STUDIO</a
         >
+        <button class="mobile-menu-btn" type="button">
+          <svg class="mobile-menu-btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
         <nav class="main-nav">
           <ul class="main-nav-list">
             <li class="main-nav-item">
@@ -61,14 +66,14 @@
     </header>
     <main>
       <!--Hero section-->
-      <section class="hero-section" id="hero">
+      <section class="hero-section hide" id="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="hero-btn" type="button">Order Service</button>
         </div>
       </section>
       <!--Features section-->
-      <section class="features-section" id="features">
+      <section class="features-section hide" id="features">
         <div class="container">
           <h2 class="sr-only">Our features</h2>
           <ul class="features-list">
@@ -124,7 +129,7 @@
         </div>
       </section>
       <!--Team section-->
-      <section class="team-section" id="team">
+      <section class="team-section hide" id="team">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="team-list">
@@ -387,7 +392,7 @@
       </section>
 
       <!-- Portfolio section -->
-      <section class="portfolio-section" id="portfolio">
+      <section class="portfolio-section hide" id="portfolio">
         <div class="container">
           <h2 class="section-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -516,7 +521,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer-section" id="footer">
+    <footer class="footer-section hide" id="footer">
       <div class="footer-wrapper container">
         <div class="footer-container">
           <a class="logo footer-logo" href="./index.html">
@@ -600,7 +605,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-open" id="modal">
+    <div class="backdrop" id="modal">
       <div class="modal">
         <button class="modal-btn" type="button" aria-label="Close modal button">
           <svg class="modal-btn-icon" width="8" height="8">
