@@ -141,6 +141,10 @@
     text-align: left;
   }
 
+  .footer-socials .socials {
+    justify-content: flex-start;
+  }
+
   .footer-form-container {
     align-items: flex-start;
   }
