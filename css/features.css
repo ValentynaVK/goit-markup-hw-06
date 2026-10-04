@@ -74,4 +74,8 @@
     font-size: 20px;
     line-height: 1.2;
   }
+
+  .features-item .section-caption {
+    font-weight: 400;
+  }
 }
