@@ -16,6 +16,11 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
+  text-align: center;
+}
+
+.features-item .section-caption {
+  font-weight: 500;
 }
 
 .features-wrapper {
@@ -30,6 +35,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .features-item .section-text {
+    text-align: left;
+  }
+
   .features-list {
     flex-direction: row;
     flex-wrap: wrap;

@@ -30,6 +30,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .header .logo {
+    margin-right: 120px;
+  }
+
   .mobile-menu-burger-btn {
     display: none;
   }
@@ -37,7 +41,7 @@
   .main-nav {
     display: flex;
     align-self: stretch;
-    margin-right: auto;
+    margin-right: 0;
   }
 
   .main-nav-list {
@@ -54,7 +58,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0;
+    padding: 24px 0;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
