@@ -1,65 +1,82 @@
 .hero-section {
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 72px 0;
-  /* padding: 188px 0; */
-
   background-color: #2e2f42;
   background-image:
-    linear-gradient(
-      180deg,
-      rgba(46, 47, 66, 0.7) 0%,
-      rgba(46, 47, 66, 0.7) 100%
-    ),
-    url('../images/hero-bg.jpg');
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    image-set(
+      url('../images/retina/dark-bgoffice-people-mobile@1x.jpg') 1x,
+      url('../images/retina/dark-bg-office-people-mobile@2x.jpg') 2x
+    );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.hero-wrapper {
-}
-
 .hero-title {
   max-width: 216px;
-  margin-bottom: 48px;
-  margin-right: auto;
-  margin-left: auto;
-
+  margin: 0 auto 72px;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.1;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
 }
 
-@media only screen and (min-width: 768px) {
-  .hero-title {
-    max-width: 496px;
-    font-size: 56px;
-  }
-}
-
 .hero-btn {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 16px 32px;
-  border: none;
+  border: 0;
   border-radius: 4px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
-
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding: 112px 0;
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      image-set(
+        url('../images/retina/dark-bg-office-tablet@1x.jpg') 1x,
+        url('../images/retina/dark-bg-office-tab@2x.jpg') 2x
+      );
+  }
+
+  .hero-title {
+    max-width: 496px;
+    margin-bottom: 36px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero-section {
+    padding: 188px 0;
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      image-set(
+        url('../images/retina/people-office-desc 1@1x.jpg') 1x,
+        url('../images/retina/people-office-desc@2x.jpg') 2x
+      );
+  }
+
+  .hero-title {
+    margin-bottom: 48px;
+  }
 }

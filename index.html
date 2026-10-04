@@ -30,7 +30,12 @@
         <a class="logo" href="./index.html">
           <span class="accent">WEB</span>STUDIO</a
         >
-        <button class="mobile-menu-burger-btn" type="button">
+        <button
+          class="mobile-menu-burger-btn"
+          type="button"
+          aria-label="Open mobile menu"
+          aria-controls="mobile-menu"
+        >
           <svg class="mobile-menu-burger-icon" width="24" height="24">
             <use href="./images/icons.svg#burger-menu"></use>
           </svg>
@@ -75,7 +80,7 @@
         </div>
       </section>
       <!--Features section-->
-      <section class="features-section hide" id="features">
+      <section class="features-section" id="features">
         <div class="container">
           <h2 class="sr-only">Our features</h2>
           <ul class="features-list">
@@ -131,7 +136,7 @@
         </div>
       </section>
       <!--Team section-->
-      <section class="team-section hide" id="team">
+      <section class="team-section" id="team">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="team-list">
@@ -139,6 +144,7 @@
               <img
                 class="team-member"
                 src="./images/team-1.jpg"
+                srcset="./images/team-1.jpg 1x, ./images/retina/img-mark-guerrero-desc@2x.jpg 2x"
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
@@ -202,6 +208,7 @@
               <img
                 class="team-member"
                 src="./images/team-2.jpg"
+                srcset="./images/team-2.jpg 1x, ./images/retina/img-tom-ford-desc@2x.jpg 2x"
                 alt="Tom Ford"
                 width="264"
                 height="260"
@@ -267,6 +274,7 @@
               <img
                 class="team-member"
                 src="./images/team-3.jpg"
+                srcset="./images/team-3.jpg 1x, ./images/retina/img-camila-desc@2x.jpg 2x"
                 alt="Camila Garcia"
                 width="264"
                 height="260"
@@ -330,6 +338,7 @@
               <img
                 class="team-member"
                 src="./images/team-4.jpg"
+                srcset="./images/team-4.jpg 1x, ./images/retina/img-daniel-wilson-desc@2x.jpg 2x"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
@@ -394,15 +403,16 @@
       </section>
 
       <!-- Portfolio section -->
-      <section class="portfolio-section hide" id="portfolio">
+      <section class="portfolio-section" id="portfolio">
         <div class="container">
           <h2 class="section-title">Our Portfolio</h2>
           <ul class="portfolio-list">
             <li class="portfolio-item">
-              <div class="portfolio-thumb">
+              <div class="portfolio-thumb" tabindex="0">
                 <img
                   class="portfolio-ill"
                   src="./images/app.png"
+                  srcset="./images/app.png 1x, ./images/retina/img-bank-app-desc@2x.jpg 2x"
                   alt="Banking app"
                   width="360"
                   height="300"
@@ -420,10 +430,11 @@
               </div>
             </li>
             <li class="portfolio-item">
-              <div class="portfolio-thumb">
+              <div class="portfolio-thumb" tabindex="0">
                 <img
                   class="portfolio-ill"
                   src="./images/payment.png"
+                  srcset="./images/payment.png 1x, ./images/retina/portfolio/cashless-payment@2x-min.jpg 2x"
                   alt="Cashless payment"
                   width="360"
                   height="300"
@@ -440,10 +451,11 @@
               </div>
             </li>
             <li class="portfolio-item">
-              <div class="portfolio-thumb">
+              <div class="portfolio-thumb" tabindex="0">
                 <img
                   class="portfolio-ill"
                   src="./images/meditation.png"
+                  srcset="./images/meditation.png 1x, ./images/retina/img-meditation-app-desc@2x.jpg 2x"
                   alt="Meditation app"
                   width="360"
                   height="300"
@@ -460,10 +472,11 @@
               </div>
             </li>
             <li class="portfolio-item">
-              <div class="portfolio-thumb">
+              <div class="portfolio-thumb" tabindex="0">
                 <img
                   class="portfolio-ill"
                   src="./images/service.png"
+                  srcset="./images/service.png 1x, ./images/retina/taxi-service-desk@2x.jpg 2x"
                   alt="Taxi service"
                   width="360"
                   height="300"
@@ -480,10 +493,11 @@
               </div>
             </li>
             <li class="portfolio-item">
-              <div class="portfolio-thumb">
+              <div class="portfolio-thumb" tabindex="0">
                 <img
                   class="portfolio-ill"
                   src="./images/illustrations.png"
+                  srcset="./images/illustrations.png 1x, ./images/retina/img-screen-illustr-desc@2x.jpg 2x"
                   alt="Screen illustrations"
                   width="360"
                   height="300"
@@ -500,10 +514,11 @@
               </div>
             </li>
             <li class="portfolio-item">
-              <div class="portfolio-thumb">
+              <div class="portfolio-thumb" tabindex="0">
                 <img
                   class="portfolio-ill"
                   src="./images/courses.png"
+                  srcset="./images/courses.png 1x, ./images/retina/img-courses-desc@2x.jpg 2x"
                   alt="Online courses"
                   width="360"
                   height="300"
@@ -523,7 +538,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer-section hide" id="footer">
+    <footer class="footer-section" id="footer">
       <div class="footer-wrapper container">
         <div class="footer-container">
           <a class="logo footer-logo" href="./index.html">
@@ -608,9 +623,13 @@
       </div>
     </footer>
     <!-- Mobile menu -->
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu">
       <div class="mobile-menu-container">
-        <button class="mobile-menu-btn">
+        <button
+          class="mobile-menu-btn"
+          type="button"
+          aria-label="Close mobile menu"
+        >
           <svg class="mobile-menu-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#close"></use>
           </svg>
